@@ -109,6 +109,19 @@ header p, footer p {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+.door.special-day {
+    /* A big, bold red/gold combo */
+    background-color: #ff0000; 
+    color: gold; 
+    border-width: 5px;
+    transform: scale(1.05); /* Make it slightly bigger */
+    box-shadow: 0 0 20px 5px #ffcc00; /* Add a glowing effect */
+    z-index: 10;
+}
+.door.special-day:hover {
+    transform: scale(1.1);
+}
+
 .back-btn {
     display: inline-block;
     margin-top: 20px;
