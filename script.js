@@ -33,12 +33,12 @@ function checkPassword() {
 }
 
 // 1. Get the current date
-//const now = new Date();
+const now = new Date();
 
 // *** TEST MODE ***
 // If you want to test what it looks like on December 15th, 
 // uncomment the line below (remove the //):
-const now = new Date("December 15, 2025");
+//const now = new Date("December 15, 2025");
 
 const currentMonth = now.getMonth(); // 11 means December (0-indexed)
 const currentDay = now.getDate(); // 1 through 31
