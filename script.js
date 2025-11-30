@@ -1,5 +1,5 @@
 // 1. Get the current date
-const now = new Date();
+//const now = new Date();
 
 // *** TEST MODE ***
 // If you want to test what it looks like on December 15th, 
