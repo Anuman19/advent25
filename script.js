@@ -48,21 +48,27 @@ const doors = document.querySelectorAll('.door');
 
 // 3. Loop through each door to check if it should be locked
 doors.forEach((door) => {
-    // Get the day number from the text inside the door (e.g., "1", "2")
     const doorDay = parseInt(door.innerText);
 
-    // LOGIC:
-    // If it is NOT December yet (month < 11), lock everything.
-    // OR, if it IS December but the day hasn't happened yet.
+    // LOGIC: Check if it is locked
     if (currentMonth < 11 || (currentMonth === 11 && currentDay < doorDay)) {
         
-        // Add the 'locked' class (defined in your CSS) to change the look
+        // --- LOCKED LOGIC (Current) ---
         door.classList.add('locked');
-
-        // Add a click event to stop the link from working
         door.addEventListener('click', (e) => {
-            e.preventDefault(); // This stops the link from opening
-            alert("Naughty! No peeking until " + "December " + doorDay + "! 🎅");
+            e.preventDefault();
+            alert("You Rascal! No peeking until " + "December " + doorDay + "! 🎅");
         });
+        
+    } else {
+        // --- 🌟 UNLOCKED ENHANCEMENT 🌟 ---
+        // Change the text to encourage clicking!
+        door.querySelector('.number').textContent = "🎁 Peek!"; 
+        
+        // You can use a specific message for Christmas Eve:
+        if (doorDay === 24) {
+            door.querySelector('.number').textContent = "🎅 CHRISTMAS EVE!";
+        }
     }
 });
+

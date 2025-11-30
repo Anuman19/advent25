@@ -97,7 +97,7 @@ header p, footer p {
 .daily-container {
     background: white;
     color: #333;
-    padding: 30px;
+    padding: 20px;
     border-radius: 15px;
     max-width: 600px;
     text-align: center;
@@ -108,7 +108,7 @@ header p, footer p {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    margin: 20px 0;
+    margin: 15px 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
@@ -123,6 +123,12 @@ header p, footer p {
 }
 .door.special-day:hover {
     transform: scale(1.1);
+}
+
+.message {
+    /* Ensure text is readable */
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
 .back-btn {
@@ -169,4 +175,28 @@ header p, footer p {
 
 .hidden {
     display: none;
+}
+
+/* 8. Mobile Responsiveness (The @media section) */
+@media (max-width: 600px) {
+    
+    h1 {
+        /* Reduce font size for small phones */
+        font-size: 2rem; 
+    }
+    header p {
+        /* Reduce large margin on small screens */
+        margin-bottom: 1rem;
+    }
+    
+    /* Ensure the main grid padding is comfortable */
+    .calendar-grid {
+        padding: 0 5px; /* Use smaller side padding */
+        gap: 10px;
+    }
+    
+    /* Increase tap target size for easier tapping */
+    .door {
+        min-height: 100px; /* Ensure a minimum size for tapping */
+    }
 }
