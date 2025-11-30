@@ -7,7 +7,7 @@
 
 body {
     /* Set the animated GIF as the background */
-    background-image: url('../assets/stars.gif');
+    background-image: url('assets/stars.gif');
     
     /* Ensure the GIF covers the whole screen */
     background-size: cover; 
