@@ -110,3 +110,38 @@ header p, footer p {
     border-radius: 5px;
     font-weight: bold;
 }
+
+/* Add this section to styles.css */
+#password-gate {
+    background-color: #388e3c; /* Darker Green */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+#password-input, #submit-password {
+    padding: 10px;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+#submit-password {
+    background-color: #f8b229; /* Gold */
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#error-message {
+    color: #ffdddd; /* Light red */
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}

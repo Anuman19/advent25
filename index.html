@@ -14,7 +14,15 @@
         <p>A little surprise for my Aishu❤️ every day.</p>
     </header>
 
-    <main class="calendar-grid">
+        <div id="password-gate">
+            <h2>Enter the Secret Word</h2>
+            <input type="password" id="password-input" placeholder="Your Secret Code">
+            <button id="submit-password">Unlock</button>
+            <p id="error-message" class="hidden">Incorrect code. Try again!</p>
+        </div>
+
+        <main class="calendar-grid" style="display: none;"> 
+
         
         <a href="days/day-01.html" class="door" id="day-1">
             <div class="number">1</div>

@@ -1,3 +1,32 @@
+// Add this code block AT THE VERY TOP of your script.js
+
+const SECRET_CODE = "100423"; 
+const gate = document.getElementById('password-gate');
+const input = document.getElementById('password-input');
+const submitBtn = document.getElementById('submit-password');
+const calendar = document.querySelector('.calendar-grid');
+const errorMsg = document.getElementById('error-message');
+
+submitBtn.addEventListener('click', checkPassword);
+input.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        checkPassword();
+    }
+});
+
+function checkPassword() {
+    if (input.value.toLowerCase() === SECRET_CODE) {
+        // Correct password: Hide gate, show calendar
+        gate.style.display = 'none';
+        calendar.style.display = 'grid'; // Use 'grid' to match CSS display setting
+        // Proceed with the rest of the calendar logic (which is already below this function)
+    } else {
+        // Incorrect password: Show error
+        errorMsg.classList.remove('hidden');
+        input.value = ''; // Clear the input field
+    }
+}
+
 // 1. Get the current date
 //const now = new Date();
 
