@@ -20,6 +20,11 @@ function checkPassword() {
         gate.style.display = 'none';
         calendar.style.display = 'grid'; // Use 'grid' to match CSS display setting
         // Proceed with the rest of the calendar logic (which is already below this function)
+        const audio = document.getElementById('background-music');
+        if (audio) {
+            audio.muted = false; // Set muted property to false
+            audio.play();        // Ensure it starts playing right away
+        }
     } else {
         // Incorrect password: Show error
         errorMsg.classList.remove('hidden');
