@@ -1,0 +1,112 @@
+/* 1. Global Styles & Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* A festive dark red background (you can change this to green #2f5d62 if you prefer) */
+    background-color: #b3000c; 
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 2. Header & Footer Typography */
+h1 {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p, footer p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* 3. The Calendar Grid Layout */
+.calendar-grid {
+    display: grid;
+    /* This makes the grid responsive automatically! */
+    /* It creates columns that are at least 120px wide and fit as many as possible */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 800px; /* Keeps the calendar from getting too wide on big screens */
+    margin-bottom: 40px;
+}
+
+/* 4. The Door Styles */
+.door {
+    background-color: #165b33; /* Christmas Green */
+    color: #f8b229; /* Gold */
+    text-decoration: none;
+    border-radius: 10px;
+    aspect-ratio: 1 / 1; /* Keeps the door perfectly square */
+    display: flex;
+    justify-content: center; /* Centers number horizontally */
+    align-items: center;     /* Centers number vertically */
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    border: 2px solid #f8b229; /* Gold Border */
+    cursor: pointer;
+    position: relative; /* Needed if you add ribbon images later */
+}
+
+/* 5. Hover Effects (Interactive feel) */
+.door:hover {
+    transform: translateY(-5px); /* Moves up slightly */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.4);
+    background-color: #1a6b3c; /* Slightly lighter green */
+}
+
+/* 6. Locked State (We will toggle this with JS later) */
+.door.locked {
+    background-color: #333; /* Dark grey */
+    color: #555;
+    border-color: #555;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* 7. Styles for the Daily Page (Reused later) */
+.daily-container {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.daily-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #b3000c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
