@@ -5,25 +5,28 @@
     padding: 0;
 }
 
+/* styles.css */
 body {
     /* Set the animated GIF as the background */
     background-image: url('assets/stars.gif');
-    
-    /* Ensure the GIF covers the whole screen */
     background-size: cover; 
-    
-    /* Center the GIF */
     background-position: center center;
-    
-    /* Keep the background fixed during scroll */
     background-attachment: fixed;
-    
-    /* Fallback color in case the GIF doesn't load */
     background-color: #f0f4f8; 
     
     color: white; 
     font-family: 'Open Sans', sans-serif;
-    /* ... rest of your body styles ... */
+    
+    /* 🔑 CRITICAL FIXES FOR CENTERING 🔑 */
+    /* 1. Use Flexbox to manage children layout */
+    display: flex; 
+    /* 2. Stack the children vertically (header, gate, main, footer) */
+    flex-direction: column; 
+    /* 3. Center all items horizontally along the cross-axis (the width) */
+    align-items: center; 
+    /* 4. Ensure the body takes up the full screen height */
+    min-height: 100vh;
+    padding: 20px;
 }
 
 /* 2. Header & Footer Typography */
