@@ -93,6 +93,14 @@ header p, footer p {
     opacity: 0.7;
 }
 
+.door:not(.locked) {
+    /* Use your hint image for unlocked doors */
+    background-image: url('assets/door-unlocked-bg.jpg'); 
+    background-size: cover;
+    color: white; /* Ensure text is still visible */
+    border-color: gold;
+}
+
 /* 7. Styles for the Daily Page (Reused later) */
 .daily-container {
     background: white;
