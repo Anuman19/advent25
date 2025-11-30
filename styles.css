@@ -6,15 +6,24 @@
 }
 
 body {
-    /* A festive dark red background (you can change this to green #2f5d62 if you prefer) */
-    background-color: #b3000c; 
-    color: white;
+    /* Set the animated GIF as the background */
+    background-image: url('../assets/stars.gif');
+    
+    /* Ensure the GIF covers the whole screen */
+    background-size: cover; 
+    
+    /* Center the GIF */
+    background-position: center center;
+    
+    /* Keep the background fixed during scroll */
+    background-attachment: fixed;
+    
+    /* Fallback color in case the GIF doesn't load */
+    background-color: #f0f4f8; 
+    
+    color: white; 
     font-family: 'Open Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    /* ... rest of your body styles ... */
 }
 
 /* 2. Header & Footer Typography */
