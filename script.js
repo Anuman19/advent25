@@ -57,6 +57,12 @@ doors.forEach((door) => {
         door.classList.add('locked');
         door.addEventListener('click', (e) => {
             e.preventDefault();
+            door.style.animation = 'shake 0.3s ease-in-out';
+
+            // Remove the animation after it finishes so it can be re-triggered
+            setTimeout(() => {
+                door.style.animation = '';
+            }, 300);
             alert("You Rascal! No peeking until " + "December " + doorDay + "! 🎅");
         });
         

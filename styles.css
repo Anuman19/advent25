@@ -13,6 +13,8 @@ body {
     background-position: center center;
     background-attachment: fixed;
     background-color: #f0f4f8; 
+
+    cursor: url('assets/cursor.webp'), default; /* Uses your image, falls back to default */
     
     color: white; 
     font-family: 'Open Sans', sans-serif;
@@ -207,4 +209,12 @@ header p, footer p {
     .door {
         min-height: 100px; /* Ensure a minimum size for tapping */
     }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
 }
