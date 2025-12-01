@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // --- Toggle Visibility using CSS Classes ---
             
             // Check if the description is currently visible (has the 'show' class)
-            const isVisible = description.classList.contains('show');
+            const isVisible = description.classList.contains('hiden');
 
             // Use the 'show' class to control the animated max-height and opacity
             if (isVisible) {
-                description.classList.remove('show');
+                description.classList.remove('hidden');
                 icon.textContent = '+';
             } else {
-                description.classList.add('show');
+                description.classList.add('hidden');
                 icon.textContent = '-';
             }
         });
