@@ -1,6 +1,6 @@
 // Add this code block AT THE VERY TOP of your script.js
 
-const SECRET_CODE = "100423"; 
+const SECRET_CODE = "burgdorf"; 
 let attemptCount = 0;
 const gate = document.getElementById('password-gate');
 const input = document.getElementById('password-input');
@@ -41,7 +41,7 @@ function checkPassword() {
         // 2. Check if the limit has been reached
         if (attemptCount >= 3) {
             // Provide the hint!
-            errorMsg.innerHTML = "That's not it! **HINT:** Think about our **favorite Christmas movie/song/memory** from last year.";
+            errorMsg.innerHTML = "That's not it! Where our love journey began... ❤️";
             
             // Optional: Prevent the error message from clearing itself next time
             // You might want to stop clearing the input field as well
