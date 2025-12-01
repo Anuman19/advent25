@@ -1,6 +1,7 @@
 // Add this code block AT THE VERY TOP of your script.js
 
 const SECRET_CODE = "100423"; 
+let attemptCount = 0;
 const gate = document.getElementById('password-gate');
 const input = document.getElementById('password-input');
 const submitBtn = document.getElementById('submit-password');
@@ -15,20 +16,46 @@ input.addEventListener('keypress', function(e) {
 });
 
 function checkPassword() {
+    const input = document.getElementById('password-input');
+    const errorMsg = document.getElementById('error-message');
+    const gate = document.getElementById('password-gate'); // Assuming these are defined or available
+
     if (input.value.toLowerCase() === SECRET_CODE) {
-        // Correct password: Hide gate, show calendar
+        // ... (CORRECT PASSWORD LOGIC - Keep this as is) ...
         gate.style.display = 'none';
-        calendar.style.display = 'grid'; // Use 'grid' to match CSS display setting
-        // Proceed with the rest of the calendar logic (which is already below this function)
+        calendar.style.display = 'grid'; 
         const audio = document.getElementById('background-music');
         if (audio) {
-            audio.muted = false; // Set muted property to false
-            audio.play();        // Ensure it starts playing right away
+            audio.muted = false; 
+            audio.play(); 
         }
+        
     } else {
-        // Incorrect password: Show error
-        errorMsg.classList.remove('hidden');
-        input.value = ''; // Clear the input field
+        // --- 🔑 INCORRECT PASSWORD LOGIC (UPDATED) 🔑 ---
+        
+        attemptCount++; // 👈 1. Increment the counter
+        
+        // Ensure the standard error message is visible
+        errorMsg.classList.remove('hidden'); 
+        
+        // 2. Check if the limit has been reached
+        if (attemptCount >= 3) {
+            // Provide the hint!
+            errorMsg.innerHTML = "That's not it! **HINT:** Think about our **favorite Christmas movie/song/memory** from last year.";
+            
+            // Optional: Prevent the error message from clearing itself next time
+            // You might want to stop clearing the input field as well
+            input.value = ''; 
+        } else {
+            // If it's the first or second attempt, just show the standard error
+            errorMsg.innerHTML = "Incorrect code. Try again!"; // Reset the message if needed
+            input.value = '';
+        }
+        
+        // Optional: If you want to visually show attempts remaining:
+        if (attemptCount < 3) {
+            errorMsg.innerHTML += ` (Attempt ${attemptCount} of 3)`;
+        }
     }
 }
 
