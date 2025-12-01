@@ -183,73 +183,50 @@ header p, footer p {
     margin-top: 10px;
 }
 
-.hidden {
-    display: none;
-}
 
-/* --- Styles for Day 22 Interactive List --- */
-
-.reason-list {
-    margin-top: 20px;
-    width: 100%;
-    text-align: left;
-}
-
-.reason-item {
+/* --- Styles for Day 20 Interactive List --- */
+.reason-details {
+    /* Ensures a divider appears */
     border-bottom: 1px solid #ddd;
     margin-bottom: 15px;
-    padding-bottom: 10px;
 }
 
 .reason-title {
-    font-family: 'Great Vibes', cursive; /* Use your chosen fancy header font */
+    /* Use <summary> to handle the click area */
+    font-family: 'Merienda', cursive; /* Using your chosen font */
     font-size: 1.5rem;
     color: #b3000c; /* Festive Red */
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px 0;
     transition: color 0.2s;
+    display: block; /* Ensures it takes full width */
 }
 
-.reason-title:hover {
-    color: #ff0000;
+/* ⚠️ IMPORTANT: Remove the default arrow marker for a cleaner look */
+.reason-details summary {
+    list-style: none; /* Removes the native list marker */
+    padding: 0;
+    /* This makes the summary area the primary click target */
 }
 
-.toggle-icon {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #165b33; /* Festive Green */
+/* Required for cross-browser compatibility to remove the marker */
+.reason-details summary::marker, 
+.reason-details summary::-webkit-details-marker {
+    display: none;
+    content: '';
 }
 
+/* Style the description content */
 .reason-description {
     font-family: 'Open Sans', sans-serif;
     padding: 10px 0 10px 15px;
     font-size: 1rem;
     line-height: 1.5;
-    background-color: #f7f7f7; /* Light background for readability */
+    background-color: #f7f7f7; 
     color: #333;
-    border-left: 3px solid #f8b229; /* Gold accent */
+    border-left: 3px solid #f8b229;
     border-radius: 0 5px 5px 0;
     margin-top: 5px;
-    
-    /* CSS for simple fade-in effect */
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
-}
-
-.reason-description.show {
-    max-height: 500px; /* Needs to be larger than content height */
-    opacity: 1;
-}
-
-/* Ensure the hide/show class is defined */
-.hidden {
-    display: none;
 }
 
 /* 8. Mobile Responsiveness (The @media section) */
