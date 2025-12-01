@@ -187,6 +187,71 @@ header p, footer p {
     display: none;
 }
 
+/* --- Styles for Day 22 Interactive List --- */
+
+.reason-list {
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.reason-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.reason-title {
+    font-family: 'Great Vibes', cursive; /* Use your chosen fancy header font */
+    font-size: 1.5rem;
+    color: #b3000c; /* Festive Red */
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    transition: color 0.2s;
+}
+
+.reason-title:hover {
+    color: #ff0000;
+}
+
+.toggle-icon {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #165b33; /* Festive Green */
+}
+
+.reason-description {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 0 10px 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #f7f7f7; /* Light background for readability */
+    color: #333;
+    border-left: 3px solid #f8b229; /* Gold accent */
+    border-radius: 0 5px 5px 0;
+    margin-top: 5px;
+    
+    /* CSS for simple fade-in effect */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.reason-description.show {
+    max-height: 500px; /* Needs to be larger than content height */
+    opacity: 1;
+}
+
+/* Ensure the hide/show class is defined */
+.hidden {
+    display: none;
+}
+
 /* 8. Mobile Responsiveness (The @media section) */
 @media (max-width: 600px) {
     
