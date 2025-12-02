@@ -183,6 +183,9 @@ header p, footer p {
     margin-top: 10px;
 }
 
+.hidden {
+    display: none;
+}
 
 /* --- Styles for Day 20 Interactive List --- */
 .reason-details {
