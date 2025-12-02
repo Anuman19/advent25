@@ -1,5 +1,5 @@
 // Add this code block AT THE VERY TOP of your script.js
-export const dailyData = [
+const dailyData = [
     { id: 2, password: "burgdorf", hint: "That's not it! Where our love journey began... ❤️" },
     { id: 3, password: "milano", hint: "A trip by train🚂." },
     { id: 4, password: "sushi", hint: "Our favorite food 🍣." },
