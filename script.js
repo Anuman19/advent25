@@ -13,11 +13,11 @@ const dailyData = [
     { id: 12, password: "paris", hint: "The city of love 💕." },
     { id: 13, password: "disneyland", hint: "Your dream come true place 🏰." },
     { id: 14, password: "kopenhagen", hint: "A trip to kopppan..." },
-    { id: 15, password: "athens", hint: "Lasagne is better than moussaka 🍝." },
+    { id: 15, password: "athen", hint: "Lasagne is better than moussaka 🍝." },
     { id: 16, password: "rolls", hint: "Your first promise to me..." },
     { id: 17, password: "audi", hint: "Our special car 🚗." },
     { id: 18, password: "graduado", hint: "Our first achievement together 🎓." },
-    { id: 19, password: "prague", hint: "Gulash and a dancing house 🏰." },
+    { id: 19, password: "prag", hint: "Gulash and a dancing house 🏰." },
     { id: 20, password: "colmar", hint: "A christmas market to remember 🎄." },
     { id: 21, password: "strassburg", hint: "Another christmas market 🎅." },
     { id: 22, password: "montreux", hint: "Another christmas market 🎁." },
@@ -27,9 +27,9 @@ const dailyData = [
 
 // --- 1. GLOBAL CONFIGURATION & DATE ---
 // Create the date object once to be used everywhere
-//const today = new Date();
+const today = new Date();
 // *** TEST MODE: Uncomment below to test specific dates ***
-const today = new Date("December 15, 2025"); 
+//const today = new Date("December 15, 2025"); 
 
 const currentMonth = today.getMonth(); // 11 = December
 const currentDay = today.getDate();
