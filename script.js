@@ -27,9 +27,9 @@ const dailyData = [
 
 // --- 1. GLOBAL CONFIGURATION & DATE ---
 // Create the date object once to be used everywhere
-const today = new Date();
+//const today = new Date();
 // *** TEST MODE: Uncomment below to test specific dates ***
-// const today = new Date("December 15, 2025"); 
+const today = new Date("December 15, 2025"); 
 
 const currentMonth = today.getMonth(); // 11 = December
 const currentDay = today.getDate();
